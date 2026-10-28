@@ -1,0 +1,16 @@
+{
+  "model": "Salesforce/codet5-base",
+  "epochs": 1,
+  "batch_size": 2,
+  "accumulation": 4,
+  "max_length": 32,
+  "lr": 2e-05,
+  "seed": 42,
+  "limit": 4,
+  "output": "smoke",
+  "device": "cpu",
+  "torch": "2.14.1+cu130",
+  "python": "3.12.14",
+  "status": "running",
+  "smoke_test_only": true
+}

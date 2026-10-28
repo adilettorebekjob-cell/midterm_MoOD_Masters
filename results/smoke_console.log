@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.12/site-packages/transformers/configuration_utils.py", line 981, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/transformers/utils/hub.py", line 370, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/transformers/utils/hub.py", line 634, in cached_files
+    raise e
+  File "/root/.local/lib/python3.12/site-packages/transformers/utils/hub.py", line 537, in cached_files
+    hf_hub_download(
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 276, in _inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1047, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1117, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1762, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1669, in get_hf_file_metadata
+    response = _httpx2_follow_hub_redirects_with_backoff(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 764, in _httpx2_follow_hub_redirects_with_backoff
+    response = http_backoff(
+               ^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 637, in http_backoff
+    return next(
+           ^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 504, in _http_backoff_base
+    client = get_session()
+             ^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 417, in get_session
+    _GLOBAL_CLIENT = _GLOBAL_CLIENT_FACTORY()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 345, in default_client_factory
+    return httpx2.Client(
+           ^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/httpx2/_client.py", line 673, in __init__
+    else self._init_proxy_transport(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/httpx2/_client.py", line 721, in _init_proxy_transport
+    return HTTPTransport(
+           ^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/httpx2/_transports/default.py", line 187, in __init__
+    raise ImportError(
+ImportError: Using SOCKS proxy, but the 'socksio' package is not installed. Make sure to install httpx using `pip install httpx[socks]`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/63720ac15019/Midterm_Group3/train.py", line 80, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/workspace/scratch/63720ac15019/Midterm_Group3/train.py", line 51, in main
+    tok=AutoTokenizer.from_pretrained(args.model); model=CodeT5Classifier(args.model).to(device)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 809, in from_pretrained
+    config = PreTrainedConfig.from_pretrained(pretrained_model_name_or_path, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/transformers/configuration_utils.py", line 879, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/transformers/configuration_utils.py", line 929, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.12/site-packages/transformers/configuration_utils.py", line 1001, in _get_config_dict
+    raise OSError(
+OSError: Can't load the configuration of 'Salesforce/codet5-base'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'Salesforce/codet5-base' is the correct path to a directory containing a config.json file

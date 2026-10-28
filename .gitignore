@@ -1,0 +1,32 @@
+# Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local IDE configuration and credentials
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Model binaries and temporary checkpoint files: keep locally for demos
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+pytorch_model*.bin
+.best.pt.*
+**/tokenizer/
+checkpoints/
+.cache/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Intentionally track data JSONL/archive and experimental JSON, JSONL, PNG, logs.
+# Do not ignore all of results/ or data/.

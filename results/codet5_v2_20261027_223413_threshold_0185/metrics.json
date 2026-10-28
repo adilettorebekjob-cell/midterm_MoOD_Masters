@@ -1,0 +1,21 @@
+{
+  "threshold": 0.10551365464925766,
+  "average_precision": 0.1482732475805164,
+  "accuracy": 0.918416447944007,
+  "precision": 0.14722222222222223,
+  "recall": 0.44537815126050423,
+  "f1": 0.22129436325678498,
+  "roc_auc": 0.8636336187293242,
+  "confusion_matrix": [
+    [
+      4146,
+      307
+    ],
+    [
+      66,
+      53
+    ]
+  ],
+  "accuracy_requirement_met": false,
+  "status": "held-out evaluation"
+}

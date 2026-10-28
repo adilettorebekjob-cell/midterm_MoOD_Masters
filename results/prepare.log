@@ -1,0 +1,38 @@
+{
+  "source": "https://raw.githubusercontent.com/rmusab/vul-llm-finetune/main/Datasets/with_p3/java_k_1_strict_2023_06_30.tar.gz",
+  "archive_sha256": "76e1bc8dd360d122b8939569bf57919df4f388d37d3f1762b0088732ba919e58",
+  "train": {
+    "raw_valid_rows": 13247,
+    "invalid_rows": 0,
+    "clean_rows": 13199,
+    "duplicates_removed": 45,
+    "conflicts_removed": 3,
+    "classes": {
+      "0": 12803,
+      "1": 396
+    }
+  },
+  "valid": {
+    "raw_valid_rows": 5131,
+    "invalid_rows": 0,
+    "clean_rows": 5125,
+    "duplicates_removed": 6,
+    "conflicts_removed": 0,
+    "classes": {
+      "0": 4996,
+      "1": 129
+    }
+  },
+  "test": {
+    "raw_valid_rows": 4576,
+    "invalid_rows": 0,
+    "clean_rows": 4572,
+    "duplicates_removed": 4,
+    "conflicts_removed": 0,
+    "classes": {
+      "0": 4453,
+      "1": 119
+    }
+  },
+  "conflicting_hashes": 1
+}

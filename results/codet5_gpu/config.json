@@ -1,0 +1,18 @@
+{
+  "model": "Salesforce/codet5-base",
+  "epochs": 3,
+  "batch_size": 4,
+  "accumulation": 4,
+  "max_length": 256,
+  "lr": 2e-05,
+  "seed": 42,
+  "limit": 0,
+  "output": "codet5_gpu",
+  "device": "cuda",
+  "torch": "2.8.0+cu128",
+  "python": "3.13.7",
+  "status": "complete",
+  "smoke_test_only": false,
+  "model_revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733",
+  "elapsed_seconds": 1234.1719391345978
+}

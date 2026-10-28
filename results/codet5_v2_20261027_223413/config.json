@@ -1,0 +1,30 @@
+{
+  "model": "Salesforce/codet5-base",
+  "epochs": 3,
+  "batch_size": 4,
+  "accumulation": 4,
+  "max_length": 256,
+  "lr": 2e-05,
+  "seed": 42,
+  "limit": 0,
+  "output": "codet5_v2_20261027_223413",
+  "device": "cuda",
+  "torch": "2.8.0+cu128",
+  "python": "3.13.7",
+  "status": "complete",
+  "smoke_test_only": false,
+  "model_revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733",
+  "class_counts": [
+    12803,
+    396
+  ],
+  "class_weights": [
+    0.5154651253612434,
+    16.66540404040404
+  ],
+  "selection": "validation tuned F1 then average precision",
+  "threshold_policy": "maximum validation F1; higher threshold on ties",
+  "best_epoch": 3,
+  "threshold": 0.10551365464925766,
+  "elapsed_seconds": 940.4199404716492
+}

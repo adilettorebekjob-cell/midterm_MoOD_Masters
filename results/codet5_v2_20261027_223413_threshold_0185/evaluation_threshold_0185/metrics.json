@@ -1,0 +1,20 @@
+{
+  "threshold": 0.185,
+  "samples": 4572,
+  "accuracy": 0.9413823272090989,
+  "precision": 0.16289592760180996,
+  "recall": 0.3025210084033613,
+  "f1": 0.21176470588235294,
+  "roc_auc": 0.8636336187293242,
+  "confusion_matrix": [
+    [
+      4268,
+      185
+    ],
+    [
+      83,
+      36
+    ]
+  ],
+  "accuracy_requirement_met": true
+}
